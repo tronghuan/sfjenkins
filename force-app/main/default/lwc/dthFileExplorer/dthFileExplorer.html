@@ -1,0 +1,68 @@
+<!--
+  @File Name          : qsydFileExplorer.html
+  @Description        : 
+  @Author             : Paul Lucas, Jiun Ryu, Elly Zhu, Derrick Vuong
+-->
+<template>
+  <lightning-layout
+    multiple-rows="true"
+    vertical-align="stretch"
+  >
+    <lightning-layout-item size="12" padding="around-small">
+      <div class="slds-text-heading_small">
+        <lightning-icon
+          icon-name="standard:file"
+          alternative-text="File"
+          title="File Explorer"
+          size="small"
+          class="slds-m-right_x-small"
+        ></lightning-icon>
+        {title}
+          <div slot="tagline"></div>
+      </div>
+    </lightning-layout-item>
+    <lightning-layout-item size="12" class="file-explorer-container">
+      <lightning-layout multiple-rows="true" vertical-align="stretch">
+        <lightning-layout-item
+          size="12"
+          medium-device-size="12"
+          large-device-size="9"
+          class="slds-grid"
+        >
+          <div class="file-tree-container" style="width: calc(100% * 1 / 3)">
+            <div class="file-tree slds-p-around_small">
+            </div>
+          </div>
+          <div
+            class="drag-bar"
+          >
+            <lightning-icon
+              icon-name="utility:drag_and_drop"
+              size="xx-small"
+              class="slds-is-absolute"
+            ></lightning-icon>
+          </div>
+          <div
+            class="file-main-container slds-p-around_small"
+            style="width: calc(100% * 2 / 3)"
+          >
+            <div>
+            </div>
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item
+          size="12"
+          medium-device-size="12"
+          large-device-size="3"
+          padding="around-small"
+          class="file-detail-container"
+        >
+          <div class="file-detail">
+            <div class="">
+            </div>
+          </div>
+        </lightning-layout-item>
+      </lightning-layout>
+    </lightning-layout-item>
+  </lightning-layout>
+</template>

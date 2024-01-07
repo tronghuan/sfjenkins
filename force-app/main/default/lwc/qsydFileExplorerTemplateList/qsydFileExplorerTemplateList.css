@@ -1,0 +1,23 @@
+/******************************************************************
+
+    Author:         Paul Lucas
+    Company:        Salesforce
+    Description:    qsydFileExplorerTemplateList
+    Date:           01-Aug-2020
+
+    TODO:
+    - https://www.lightningdesignsystem.com/design-tokens/
+
+ *******************************************************************/
+:host {
+    --table-height: 290px;
+}
+
+.table-container {
+    height: var(--table-height);
+}
+
+.table {
+    /*min-height: 250px;*/
+    height: 290px;
+}

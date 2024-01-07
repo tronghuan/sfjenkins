@@ -1,0 +1,34 @@
+<!--=============================================================== 
+
+    Tác giả:         Trong Huan
+    Email:           huandt92@gmail.com
+    SĐT:             0942591118
+    Mô tả:           Phần HTML của component alert
+    Ngày tạo:        03-12-2023
+
+    TODO:
+    - https://www.lightningdesignsystem.com/design-tokens/
+
+================================================================-->
+<template>
+    <template if:true={show}>
+        <div class={alertClass} role="alert">
+            <span class="slds-assistive-text">{type}</span>
+            <span class="slds-icon_container slds-icon-utility-user slds-m-right_x-small">
+                <lightning-icon icon-name={messageIcon} variant={variant} alternative-text="close" size="x-small"
+                                title="message-icon">
+                </lightning-icon>
+            </span>
+            <h2 lwc:dom="manual" class="message-container">
+            </h2>
+            <div class="slds-notify__close">
+                <button class="slds-button slds-button_icon slds-button_icon-small" title="Close" onclick={close}>
+                    <lightning-icon icon-name="utility:close" variant={variant} alternative-text="close" size="x-small"
+                                    title="close">
+                    </lightning-icon>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+            </div>
+        </div>
+    </template>
+</template>

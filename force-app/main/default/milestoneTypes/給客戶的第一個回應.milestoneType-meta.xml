@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MilestoneType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>設定當工作人員將第一個回應傳送給客戶時的非週期里程碑。</description>
+    <recurrenceType>none</recurrenceType>
+</MilestoneType>

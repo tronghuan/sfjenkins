@@ -1,0 +1,15 @@
+<!-- Before you begin, ensure that your component is configured for custom tab usage. -->
+<!-- Bằng cách thêm implements="force:appHostable" vào trong thẻ <aura:component> -->
+<aura:component implements="force:appHostable">
+    <div class="white">
+        Hello, HTML!
+      </div>
+      
+      <h2>Check out the style in this list.</h2>
+      
+      <ul>
+        <li class="red">I'm red.</li>
+        <li class="blue">I'm blue.</li>
+        <li class="green">I'm green.</li>
+      </ul>
+</aura:component>

@@ -1,0 +1,6 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+		Đây là ví dụ về phần mô tả cho component aura
+	</aura:example>
+</aura:documentation>
