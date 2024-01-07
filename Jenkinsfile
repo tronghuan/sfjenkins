@@ -40,9 +40,9 @@ node {
 
             // need to pull out assigned username
             if (isUnix()) {
-                rmsg = sh returnStdout: true, script: "${toolbelt} project deploy start -d manifest/. -o ${HUB_ORG}"
+                rmsg = sh returnStdout: true, script: "${toolbelt} project deploy start --metadata ApexClass -o ${HUB_ORG}"
             } else {
-                rmsg = bat returnStdout: true, script: "\"${toolbelt}\" project deploy start -d manifest/. -o ${HUB_ORG}"
+                rmsg = bat returnStdout: true, script: "\"${toolbelt}\" project deploy start --metadata ApexClass -o ${HUB_ORG}"
             }
 
             printf rmsg
