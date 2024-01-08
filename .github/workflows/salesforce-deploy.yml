@@ -12,10 +12,11 @@ jobs:
     - name: Setup Salesforce DX
       uses: sfdx-actions/setup-sfdx@v1
 
+    - name: Tạo File Server Key
+      run: echo "${{ secrets.SERVER_KEY }}" > server.key
+
     - name: Authorize Org
-      run: |
-        echo ${{ secrets.SERVER_KEY }} | base64 --decode > server.key
-        sfdx auth:jwt:grant --clientid ${{ secrets.SALESFORCE_CONSUMER_KEY }} --jwtkeyfile server.key --username ${{ secrets.SALESFORCE_USERNAME }} --instanceurl https://login.salesforce.com
+      run: sfdx auth:jwt:grant --clientid ${{ secrets.SALESFORCE_CONSUMER_KEY }} --jwtkeyfile server.key --username ${{ secrets.SALESFORCE_USERNAME }} --instanceurl https://login.salesforce.com
 
     - name: Deploy to Salesforce
       run: sfdx force:source:deploy -p force-app
