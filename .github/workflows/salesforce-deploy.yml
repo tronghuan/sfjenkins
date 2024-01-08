@@ -16,7 +16,7 @@ jobs:
       run: echo "${{ secrets.SERVER_KEY }}" > server.key
 
     - name: Authorize Org
-      run: sfdx auth:jwt:grant --clientid ${{ secrets.SALESFORCE_CONSUMER_KEY }} --jwtkeyfile server.key --username ${{ secrets.SALESFORCE_USERNAME }} --instanceurl https://login.salesforce.com
+      run: sfdx auth:jwt:grant -i ${{ secrets.SALESFORCE_CONSUMER_KEY }} -f server.key --username ${{ secrets.SALESFORCE_USERNAME }} -r https://login.salesforce.com
 
     - name: Deploy to Salesforce
       run: sfdx force:source:deploy -p force-app
