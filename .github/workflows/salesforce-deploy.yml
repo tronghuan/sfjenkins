@@ -13,7 +13,9 @@ jobs:
       uses: sfdx-actions/setup-sfdx@v1
 
     - name: Authorize Org
-      run: sf auth jwt grant -o huan@daotrong.com -f ${{ secrets.SERVER_KEY }} -i 3MVG95mg0lk4bathnRmPKo9JXuOCfrzAgjSS_rOd78cFEeKTWmqmL3bv4oGVhr9rqQxZZk.OrgCZA7C0iyr3e -r https://login.salesforce.com
+      run: |
+        echo "${{ secrets.SERVER_KEY }}" > server.key
+        sf auth jwt grant -o huan@daotrong.com -f server.key -i 3MVG95mg0lk4bathnRmPKo9JXuOCfrzAgjSS_rOd78cFEeKTWmqmL3bv4oGVhr9rqQxZZk.OrgCZA7C0iyr3e -r https://login.salesforce.com
 
     - name: Deploy to Salesforce
       run: sfdx force:source:deploy -p force-app
