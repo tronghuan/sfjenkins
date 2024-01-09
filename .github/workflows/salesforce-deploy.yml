@@ -13,7 +13,7 @@ jobs:
       uses: sfdx-actions/setup-sfdx@v1
 
     - name: Authorize Org
-      run: sfdx auth:jwt:grant -i ${{ secrets.SALESFORCE_CONSUMER_KEY }} -f ${{ secrets.SERVER_KEY }} --username ${{ secrets.SALESFORCE_USERNAME }} -r https://login.salesforce.com
+      run: sf auth jwt grant -o huan@daotrong.com -f ${{ secrets.SERVER_KEY }} -i 3MVG95mg0lk4bathnRmPKo9JXuOCfrzAgjSS_rOd78cFEeKTWmqmL3bv4oGVhr9rqQxZZk.OrgCZA7C0iyr3e -r https://login.salesforce.com
 
     - name: Deploy to Salesforce
       run: sfdx force:source:deploy -p force-app
