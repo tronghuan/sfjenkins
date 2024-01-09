@@ -18,4 +18,4 @@ jobs:
         sf auth jwt grant -o huan@daotrong.com -f server.key -i 3MVG95mg0lk4bathnRmPKo9JXuOCfrzAgjSS_rOd78cFEeKTWmqmL3bv4oGVhr9rqQxZZk.OrgCZA7C0iyr3e -r https://login.salesforce.com
 
     - name: Deploy to Salesforce
-      run: sf project deploy start --metadata ApexClass -o huan@daotrong.com
+      run: sf project deploy start --metadata ApexClass:TestDeploy -o huan@daotrong.com
